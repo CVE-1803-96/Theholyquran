@@ -1,0 +1,5 @@
+{
+  "name": "Noor Quran",
+  "description": "A Quranic application to help users recite and memorize verses with voice recognition and progress tracking.",
+  "requestFramePermissions": ["microphone"]
+}

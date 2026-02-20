@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-heaven-50: #fffef7;
+  --color-heaven-100: #fff9e0;
+  --color-heaven-200: #fff0b8;
+  --color-heaven-300: #ffe485;
+  --color-heaven-400: #ffd54f;
+  --color-heaven-500: #ffc107;
+  --color-heaven-600: #e6a800;
+  --color-heaven-700: #b38200;
+  --color-heaven-800: #7d5b00;
+  --color-heaven-900: #4a3600;
+
+  --color-divine-50: #fefcf4;
+  --color-divine-100: #fdf6e3;
+  --color-divine-200: #f9e8b8;
+  --color-divine-300: #f2d58a;
+  --color-divine-400: #e8bf5e;
+  --color-divine-500: #d4a437;
+  --color-divine-600: #b8872a;
+  --color-divine-700: #926a21;
+  --color-divine-800: #6b4e19;
+  --color-divine-900: #3d2c0e;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-color: var(--color-heaven-50);
+  color: var(--color-divine-900);
+}
+
+/* Animations */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes rise {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-rise {
+  animation: rise 0.8s ease-out forwards;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-warm {
+  background: linear-gradient(135deg, rgba(255, 252, 240, 0.6), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 215, 100, 0.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(184, 135, 42, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 135, 42, 0.5);
+}
